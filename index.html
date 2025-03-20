@@ -1,0 +1,719 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Clinical InSite 2.0</title>
+
+    <meta content="TO DO - Get description from InSite team" name="description" />
+    <!-- <link rel="shortcut icon" href="/assets/images/favicon.ico"> -->
+    <link href="assets/css/dashstyle.css" id="dashstyle-style" rel="stylesheet" />
+    <link href="assets/css/cert.css" id="cert-style" rel="stylesheet" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" />
+    <link href="assets/css/dataTables.bootstrap5.min.css" id="bootstrap-style" rel="stylesheet" />
+
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" />
+
+    <link href="assets/css/select2.css" id="select2-style" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/folders.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+   
+    <!-- Syncfusion ASP.NET Core controls styles -->
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/24.2.7/fluent.css" />
+
+    <!-- App js -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/form-builder.min.js"></script>
+    <script src="assets/js/form-render.min.js"></script>
+
+    <script src="assets/js/popper.js"></script>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
+
+    <!-- <script src="assets/js/plugin.js"></script> -->
+    <script src="assets/js/site.js"></script>
+
+    <script src="assets/js/select2.js"></script>
+    <script src="assets/js/ckeditor.js"></script>
+
+    <!-- blueimp Gallery styles -->
+    <link rel="stylesheet"
+          href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css" />
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <link rel="stylesheet" href="assets/css/jquery.fileupload.css" />
+    <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css" />
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript b-ywet7mfhhb>
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css" />
+    </noscript>
+    <noscript b-ywet7mfhhb>
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css" />
+    </noscript>
+
+    <!-- Syncfusion ASP.NET Core controls scripts -->
+    <script src="https://cdn.syncfusion.com/ej2/25.1.42/dist/ej2.min.js"></script>
+
+    <!-- DataTables buttons dependencies -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.0/css/buttons.dataTables.css" />
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
+
+
+    <style>
+        input::-webkit-calendar-picker-indicator {
+            opacity: 100;
+            display: block;
+        }
+
+        .modal-backdrop {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+
+<link rel="stylesheet" href="assets/update.css">
+</head>
+
+<body data-topbar="light">
+      <script>
+        $(document).ready(function () {
+            $('body').css('zoom', '0.8');
+        });
+    </script>
+    <!-- Begin page -->
+    <div b-ywet7mfhhb id="layout-wrapper">
+        <header b-ywet7mfhhb id="page-topbar">
+            <div b-ywet7mfhhb class="navbar-header">
+                <div b-ywet7mfhhb class="d-flex">
+                    <!-- LOGO -->
+                    <div b-ywet7mfhhb class="navbar-brand-box">
+                        <a b-ywet7mfhhb href="/" class="logo logo-dark">
+                            <span b-ywet7mfhhb class="logo-sm">
+                                <img b-ywet7mfhhb src="assets/images/insitelogo_sm.png" alt="" width="60">
+                            </span>
+                            <span b-ywet7mfhhb class="logo-lg">
+                                <img b-ywet7mfhhb src="assets/images/insitelogo.png" alt="" width="225">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button b-ywet7mfhhb type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                        <i b-ywet7mfhhb class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                    &nbsp; &nbsp;
+                    <button b-ywet7mfhhb type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                        <span b-ywet7mfhhb>Protocol: Neurocrine Biosciences Demo</span>
+                    </button>
+                    &nbsp; &nbsp;
+                    <button b-ywet7mfhhb type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                        <span b-ywet7mfhhb>
+                            Company: Clinical Drug Development Corporation
+                                <span b-ywet7mfhhb> - 9998</span>
+
+                        </span>
+                    </button>
+                </div>
+                <div b-ywet7mfhhb class="d-flex">
+                    <div b-ywet7mfhhb class="dropdown d-none d-lg-inline-block ms-1">
+                        <button b-ywet7mfhhb type="button" class="btn header-item noti-icon waves-effect"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i b-ywet7mfhhb class="bx bx-customize"></i>
+                        </button>
+
+                    </div>
+
+                    <div b-ywet7mfhhb class="dropdown d-none d-lg-inline-block ms-1">
+                        <button b-ywet7mfhhb type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                            <i b-ywet7mfhhb class="bx bx-fullscreen"></i>
+                        </button>
+                    </div>
+
+                    <div b-ywet7mfhhb class="dropdown d-inline-block">
+                        <button b-ywet7mfhhb type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                            <span b-ywet7mfhhb class="d-none d-xl-inline-block ms-1" key="t-henry">
+iupdater1@gmail.com                            </span>
+                            <i b-ywet7mfhhb class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div b-ywet7mfhhb class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+
+                            <a b-ywet7mfhhb class="dropdown-item d-block" href="/Account/MyAccount"><i b-ywet7mfhhb class="bx bx-wrench font-size-16 align-middle me-1"></i> <span b-ywet7mfhhb key="t-settings">My Account</span></a>
+                            <form id="logoutForm" method="post" class="d-none" action="/Account/Logout">
+                                
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PQfUOIzAeBMiK4kohbtMH7A6cMOxNmoTlHjO-jPgH2oR63TMuQTDRDo1nVgMvDIZeJWZG6rLo4M4iyz48YuQBdGPz2IhIcEf6CJc0etj5mgvqsld_QIkbNbTiYTbgT_6PZP8eK0UPl8ovHCRwbcvrY95O51S7tY-hQYnjWjxwqPwUrn19nF7Rj15AMhgrX_Pg" /></form>
+                            <a b-ywet7mfhhb class="dropdown-item text-danger" href="javascript:void(0);" onclick="document.getElementById('logoutForm').submit();">
+                                <i b-ywet7mfhhb class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                                Logout
+                            </a>
+
+                            <div b-ywet7mfhhb class="dropdown-divider"></div>
+
+                            <a b-ywet7mfhhb class="dropdown-item" href="#"><i b-ywet7mfhhb class="bx bx-wallet font-size-16 align-middle me-1"></i> <span b-ywet7mfhhb key="t-my-wallet">Last Login: 03/19/2025 09:30 AM</span></a>
+                            <a b-ywet7mfhhb class="dropdown-item" href="#">
+                                <i b-ywet7mfhhb class="bx bx-wallet font-size-16 align-middle me-1"></i>
+                                <span b-ywet7mfhhb key="t-my-wallet">Password Expires: </span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div b-ywet7mfhhb class="vertical-menu">
+
+            <div b-ywet7mfhhb data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div b-ywet7mfhhb id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul b-ywet7mfhhb class="metismenu list-unstyled" id="side-menu">
+                        <li b-ywet7mfhhb class="menu-title" key="t-menu">Menu</li>
+
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/">
+                                <i b-ywet7mfhhb class="bx bx-home-circle"></i>
+                                <span b-ywet7mfhhb>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/Query">
+                                <i b-ywet7mfhhb class="bx bx-message-dots"></i>
+                                <span b-ywet7mfhhb>Queries</span>
+                            </a>
+                        </li>
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/HelpDesk">
+                                <i b-ywet7mfhhb class="bx bx-help-circle"></i>
+                                <span b-ywet7mfhhb>Help Desk</span>
+                            </a>
+                        </li>
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/KnowledgeBase">
+                                <i b-ywet7mfhhb class="bx bx-book-open"></i>
+                                <span b-ywet7mfhhb>Knowledge Base</span>
+                            </a>
+                        </li>
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/FAQs">
+                                <i b-ywet7mfhhb class='bx bx-conversation'></i>
+                                <span b-ywet7mfhhb>FAQs</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <div b-ywet7mfhhb class="main-content">
+            <div b-ywet7mfhhb class="page-content">
+                <div b-ywet7mfhhb class="container-fluid" style="min-height: 100vh !important;">
+                    
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-flex align-items-center justify-content-between">
+            <h4 class="mb-0 font-size-18">FAQs</h4>
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">InSite 2.0</a></li>
+                    <li class="breadcrumb-item active">FAQs</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="faq__wrapper">
+    <div class="faq__header">
+        <p>FAQs</p>
+        <h1>Frequently asked questions</h1>
+        <p class="subtitle">Have questions? We're here to hepl</p>
+        <div class="faq__questionfield">
+            <img src="img/search.png" alt="icon">
+            <input type="text" placeholder="Search">
+        </div>
+    </div>
+    <div class="faq__body">
+        <div class="accordion" id="faqAccordion1">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_2934fe6a-5240-44fc-91ed-6cb30999a1d7">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_2934fe6a-5240-44fc-91ed-6cb30999a1d7" aria-expanded="true" aria-controls="collapse_2934fe6a-5240-44fc-91ed-6cb30999a1d7">
+                                How to login
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_2934fe6a-5240-44fc-91ed-6cb30999a1d7" class="accordion-collapse collapse show" aria-labelledby="heading_2934fe6a-5240-44fc-91ed-6cb30999a1d7" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, delectus qui! Totam porro debitis natus temporibus accusamus, minus consectetur deleniti ipsum, culpa quaerat sequi voluptates expedita laboriosam qui. Blanditiis, corrupti.
+                        </p>
+                        </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_96e05db6-208a-4290-a195-2f4edc7d20d4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_96e05db6-208a-4290-a195-2f4edc7d20d4" aria-expanded="false" aria-controls="collapse_96e05db6-208a-4290-a195-2f4edc7d20d4">
+                                How to logout
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_96e05db6-208a-4290-a195-2f4edc7d20d4" class="accordion-collapse collapse" aria-labelledby="heading_96e05db6-208a-4290-a195-2f4edc7d20d4" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>abc</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_9a81cbc4-ca16-4d6d-8d7a-1e91394b883e">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_9a81cbc4-ca16-4d6d-8d7a-1e91394b883e" aria-expanded="false" aria-controls="collapse_9a81cbc4-ca16-4d6d-8d7a-1e91394b883e">
+                                How to edit
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_9a81cbc4-ca16-4d6d-8d7a-1e91394b883e" class="accordion-collapse collapse" aria-labelledby="heading_9a81cbc4-ca16-4d6d-8d7a-1e91394b883e" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>click on edit button</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_7d4310d8-0613-4558-b92a-2a597815f7b2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_7d4310d8-0613-4558-b92a-2a597815f7b2" aria-expanded="false" aria-controls="collapse_7d4310d8-0613-4558-b92a-2a597815f7b2">
+                                What do you do for security? Are my messages secure?
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_7d4310d8-0613-4558-b92a-2a597815f7b2" class="accordion-collapse collapse" aria-labelledby="heading_7d4310d8-0613-4558-b92a-2a597815f7b2" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>
+                                    Messages never touch our servers. They're sent directly to the platforms, preserving end-to-end encryption. Texts app works like the official app does.
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_471150bb-22ab-4020-84d3-c413b39bbe17">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_471150bb-22ab-4020-84d3-c413b39bbe17" aria-expanded="false" aria-controls="collapse_471150bb-22ab-4020-84d3-c413b39bbe17">
+                                What happens if you get hacked?
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_471150bb-22ab-4020-84d3-c413b39bbe17" class="accordion-collapse collapse" aria-labelledby="heading_471150bb-22ab-4020-84d3-c413b39bbe17" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>
+                                    Our servers host no sensitive data, messages or account credentials. All your data stays on-device. Your data continues to stay secure in the event of a security breach.
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_b27f2223-c998-453f-8ccd-abea37328d33">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_b27f2223-c998-453f-8ccd-abea37328d33" aria-expanded="false" aria-controls="collapse_b27f2223-c998-453f-8ccd-abea37328d33">
+                                Where can I run the app?
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_b27f2223-c998-453f-8ccd-abea37328d33" class="accordion-collapse collapse" aria-labelledby="heading_b27f2223-c998-453f-8ccd-abea37328d33" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>
+                                    Texts app runs on macOS, Windows and Linux while Beeper is available for desktop, iOS and Android.
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_3681a995-ad14-460c-8c40-dd0aecc7f7d4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_3681a995-ad14-460c-8c40-dd0aecc7f7d4" aria-expanded="false" aria-controls="collapse_3681a995-ad14-460c-8c40-dd0aecc7f7d4">
+                                What messaging platforms do you support?
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_3681a995-ad14-460c-8c40-dd0aecc7f7d4" class="accordion-collapse collapse" aria-labelledby="heading_3681a995-ad14-460c-8c40-dd0aecc7f7d4" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>
+                                    iMessage (only on macOS), SMS (with iMessage), WhatsApp, Telegram, Signal, Messenger, X (Twitter), Instagram, LinkedIn, IRC, Slack and Discord DMs.
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_1ffe52c1-45d6-4cf2-ab52-bf7f4db2ce3f">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_1ffe52c1-45d6-4cf2-ab52-bf7f4db2ce3f" aria-expanded="false" aria-controls="collapse_1ffe52c1-45d6-4cf2-ab52-bf7f4db2ce3f">
+                                how are you
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_1ffe52c1-45d6-4cf2-ab52-bf7f4db2ce3f" class="accordion-collapse collapse" aria-labelledby="heading_1ffe52c1-45d6-4cf2-ab52-bf7f4db2ce3f" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>i am good</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_34a8c432-1945-4e3d-84f0-d76d908d98a1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_34a8c432-1945-4e3d-84f0-d76d908d98a1" aria-expanded="false" aria-controls="collapse_34a8c432-1945-4e3d-84f0-d76d908d98a1">
+                                This is a test
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_34a8c432-1945-4e3d-84f0-d76d908d98a1" class="accordion-collapse collapse" aria-labelledby="heading_34a8c432-1945-4e3d-84f0-d76d908d98a1" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>This is a test answer</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_5deb6021-994e-4bd2-81b4-be186ff7f57c">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_5deb6021-994e-4bd2-81b4-be186ff7f57c" aria-expanded="false" aria-controls="collapse_5deb6021-994e-4bd2-81b4-be186ff7f57c">
+                                qwerty123
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_5deb6021-994e-4bd2-81b4-be186ff7f57c" class="accordion-collapse collapse" aria-labelledby="heading_5deb6021-994e-4bd2-81b4-be186ff7f57c" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>qwerty</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_cdd304d6-822b-4aba-8fa4-0be17bb56fd3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_cdd304d6-822b-4aba-8fa4-0be17bb56fd3" aria-expanded="false" aria-controls="collapse_cdd304d6-822b-4aba-8fa4-0be17bb56fd3">
+                                Test q
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_cdd304d6-822b-4aba-8fa4-0be17bb56fd3" class="accordion-collapse collapse" aria-labelledby="heading_cdd304d6-822b-4aba-8fa4-0be17bb56fd3" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>Test a</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_fcb568a6-533d-4e50-a7ea-80f2361abb7e">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_fcb568a6-533d-4e50-a7ea-80f2361abb7e" aria-expanded="false" aria-controls="collapse_fcb568a6-533d-4e50-a7ea-80f2361abb7e">
+                                qaz
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_fcb568a6-533d-4e50-a7ea-80f2361abb7e" class="accordion-collapse collapse" aria-labelledby="heading_fcb568a6-533d-4e50-a7ea-80f2361abb7e" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>qaz</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_2398eeb4-ccc8-4221-b1f9-a07cadba913d">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_2398eeb4-ccc8-4221-b1f9-a07cadba913d" aria-expanded="false" aria-controls="collapse_2398eeb4-ccc8-4221-b1f9-a07cadba913d">
+                                Lorem ipsum dolor sit.
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_2398eeb4-ccc8-4221-b1f9-a07cadba913d" class="accordion-collapse collapse" aria-labelledby="heading_2398eeb4-ccc8-4221-b1f9-a07cadba913d" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>b</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_99391276-0aef-429a-ba37-6d7ad6fd9503">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_99391276-0aef-429a-ba37-6d7ad6fd9503" aria-expanded="false" aria-controls="collapse_99391276-0aef-429a-ba37-6d7ad6fd9503">
+                                what time is it?
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_99391276-0aef-429a-ba37-6d7ad6fd9503" class="accordion-collapse collapse" aria-labelledby="heading_99391276-0aef-429a-ba37-6d7ad6fd9503" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>12</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_d19308b2-fb50-42b5-b30c-3b71e18f5144">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_d19308b2-fb50-42b5-b30c-3b71e18f5144" aria-expanded="false" aria-controls="collapse_d19308b2-fb50-42b5-b30c-3b71e18f5144">
+                                T78 is testing questing?
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_d19308b2-fb50-42b5-b30c-3b71e18f5144" class="accordion-collapse collapse" aria-labelledby="heading_d19308b2-fb50-42b5-b30c-3b71e18f5144" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>Pass or fail </p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_244825b3-dd70-4c88-88fe-4a0ef259f329">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_244825b3-dd70-4c88-88fe-4a0ef259f329" aria-expanded="false" aria-controls="collapse_244825b3-dd70-4c88-88fe-4a0ef259f329">
+                                what time is it?
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_244825b3-dd70-4c88-88fe-4a0ef259f329" class="accordion-collapse collapse" aria-labelledby="heading_244825b3-dd70-4c88-88fe-4a0ef259f329" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>62</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_f739e0d2-8e9e-4793-8adc-c93de3ddf5c4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_f739e0d2-8e9e-4793-8adc-c93de3ddf5c4" aria-expanded="false" aria-controls="collapse_f739e0d2-8e9e-4793-8adc-c93de3ddf5c4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_f739e0d2-8e9e-4793-8adc-c93de3ddf5c4" class="accordion-collapse collapse" aria-labelledby="heading_f739e0d2-8e9e-4793-8adc-c93de3ddf5c4" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>b</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_bbe4cb20-3668-4921-8fd5-beb66828d7dc">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_bbe4cb20-3668-4921-8fd5-beb66828d7dc" aria-expanded="false" aria-controls="collapse_bbe4cb20-3668-4921-8fd5-beb66828d7dc">
+                                T83 testing 
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_bbe4cb20-3668-4921-8fd5-beb66828d7dc" class="accordion-collapse collapse" aria-labelledby="heading_bbe4cb20-3668-4921-8fd5-beb66828d7dc" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>Pass or faill</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_e74a54ad-6a27-4d2f-a334-b73e0133754c">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_e74a54ad-6a27-4d2f-a334-b73e0133754c" aria-expanded="false" aria-controls="collapse_e74a54ad-6a27-4d2f-a334-b73e0133754c">
+                                how are you
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_e74a54ad-6a27-4d2f-a334-b73e0133754c" class="accordion-collapse collapse" aria-labelledby="heading_e74a54ad-6a27-4d2f-a334-b73e0133754c" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>i am good</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_4db0830a-beec-4ef8-84ae-0118b70fca21">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_4db0830a-beec-4ef8-84ae-0118b70fca21" aria-expanded="false" aria-controls="collapse_4db0830a-beec-4ef8-84ae-0118b70fca21">
+                                NOV 15?
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_4db0830a-beec-4ef8-84ae-0118b70fca21" class="accordion-collapse collapse" aria-labelledby="heading_4db0830a-beec-4ef8-84ae-0118b70fca21" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>middle</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_7de2a859-a58f-494c-8227-2bd16b8c93a4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_7de2a859-a58f-494c-8227-2bd16b8c93a4" aria-expanded="false" aria-controls="collapse_7de2a859-a58f-494c-8227-2bd16b8c93a4">
+                                nnjnjnj
+                                <span class="acc-item-status">
+                                    <i></i><i></i>
+                                </span>
+                            </button>
+                    </h2>
+                        <div id="collapse_7de2a859-a58f-494c-8227-2bd16b8c93a4" class="accordion-collapse collapse" aria-labelledby="heading_7de2a859-a58f-494c-8227-2bd16b8c93a4" data-bs-parent="#faqAccordion1">
+                            <div class="accordion-body" >
+                                <p>jbkj</p>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    // $(document).ready(function () {
+    //     // Hide all FAQ answers initially
+    //     $('.accordion-body').hide();
+
+    //     // Toggle FAQ answer visibility when clicking on a question
+    //     $('.accordion-button').click(function () {
+    //         // Hide all FAQ answers
+    //         $('.accordion-body').hide();
+
+    //         // Show the answer associated with the clicked question
+    //         $(this).closest('.accordion-item').find('.accordion-body').toggle();
+    //     });
+    // });
+
+    
+    // $(function () {
+    //     new DataTable('#faqTable');
+    // });
+
+
+    // if ('' != '' && '' != 'undefined') {
+    //     $("#successMessage").removeClass('d-none');
+    // }
+</script>
+
+
+                    
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer b-ywet7mfhhb>
+                <div b-ywet7mfhhb class="container-fluid ">
+                    <div b-ywet7mfhhb class="row">
+                        <div b-ywet7mfhhb class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © InSite 2.0
+                        </div>
+                        <div b-ywet7mfhhb class="col-sm-6">
+                            <div b-ywet7mfhhb class="text-sm-right d-none d-sm-block">
+                                Software Engineering By <a b-ywet7mfhhb href="https://zolta.io">Zolta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/simplebar.min.js"></script>
+    <script src="assets/js/waves.min.js"></script>
+
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/overview.js"></script>
+
+    <script src="assets/js/select2.js"></script>
+
+
+    <script>
+        var changeSetId = -1;
+        setInterval(function () {
+            $.ajax({
+                url: '/Secure',
+                type: 'POST',
+                success: function (data) {
+                    // Handle success
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.status === 401) {
+                        window.location.href = '/Account/Login';
+                    } else {
+                        // Handle other errors
+                    }
+                }
+            });
+        }, (20*60000)+10000); // Every 20 mins and 10s -- TO DO, replace 20 mins with value from config.
+    </script>
+
+
+    <!-- Syncfusion ASP.NET Core Script Manager -->
+    <script>window.syncfusion={isLicValidated:true};</script>
+    <div b-ywet7mfhhb id="modal-changeSet" class="modal fade" tabindex="-1" aria-labelledby="changeSetModalLabel" aria-hidden="true">
+        <div b-ywet7mfhhb class="modal-dialog">
+            <div b-ywet7mfhhb class="modal-content">
+                <div b-ywet7mfhhb class="modal-header">
+                    
+                    <button b-ywet7mfhhb type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div b-ywet7mfhhb class="modal-body">
+                    <div b-ywet7mfhhb id="modal-changeSet-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
