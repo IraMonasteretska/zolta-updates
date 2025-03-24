@@ -177,3 +177,83 @@
 
     }
 }
+
+
+/* Knowledge base */
+.knowledge-wrapper .card-body .col-lg-4 {
+    margin-bottom: 15px;
+}
+
+.knowledge-wrapper .download-link {
+    font-size: 21px;
+    color: #495057;
+    text-transform: capitalize;
+    
+}
+
+.knowledge-wrapper .custom-card  {
+    background: #fff;
+    border: 1px solid #9fa3a794;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+    margin: 0;
+    margin-bottom: 0 !important;
+}
+
+.knowledge-wrapper .custom-card .col-md-2,
+.knowledge-wrapper .custom-card .col-md-6,
+.knowledge-wrapper .custom-card .col-md-4 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+}
+
+.knowledge-wrapper .custom-card .col-md-2 {
+    margin-bottom: 10px;
+}
+
+.knowledge-wrapper .custom-card .col-md-6 {
+    margin-bottom: 10px;
+}
+
+.knowledge-wrapper .custom-card .col-md-6 .download-link {
+    margin-bottom: 15px;
+    display: block;
+    transition: 0.3s;
+}
+
+.knowledge-wrapper .custom-card .col-md-6 .download-link:hover {
+    color: rgb(85, 110, 230);
+}
+
+.knowledge-wrapper .custom-card .col-md-6 .card-text span {
+    font-size: 15px;
+    padding: 8px;
+}
+
+.knowledge-wrapper .custom-card .card-body {
+    padding: 0;
+}
+
+.knowledge-wrapper .custom-card .icon-image {
+    border: none;
+    padding: 0;
+    height: 60px;
+    width: auto;
+    box-shadow: none;
+}
+
+.knowledge-wrapper .custom-card .col-md-4 .card-text {
+    font-size: 14px;
+}
+
+@media(max-width:767.8px) {
+
+    .knowledge-wrapper .download-link {
+        font-size: 18px;
+    }
+
+
+
+}

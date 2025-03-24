@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Clinical InSite 2.0</title>
+
+    <meta content="TO DO - Get description from InSite team" name="description" />
+    <!-- <link rel="shortcut icon" href="/assets/images/favicon.ico"> -->
+    <link href="assets/css/dashstyle.css" id="dashstyle-style" rel="stylesheet" />
+    <link href="assets/css/cert.css" id="cert-style" rel="stylesheet" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" />
+    <link href="assets/css/dataTables.bootstrap5.min.css" id="bootstrap-style" rel="stylesheet" />
+
+    <!-- Icons Css -->
+    <!-- <link href="assets/css/icons.min.css" rel="stylesheet" /> -->
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" />
+
+    <link href="assets/css/select2.css" id="select2-style" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/folders.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!-- Syncfusion ASP.NET Core controls styles -->
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/24.2.7/fluent.css" />
+
+    <!-- App js -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/form-builder.min.js"></script>
+    <script src="assets/js/form-render.min.js"></script>
+
+    <script src="assets/js/popper.js"></script>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
+
+    <!-- <script src="assets/js/plugin.js"></script> -->
+    <script src="assets/js/site.js"></script>
+
+    <script src="assets/js/select2.js"></script>
+    <script src="assets/js/ckeditor.js"></script>
+
+    <!-- blueimp Gallery styles -->
+    <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css" />
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <link rel="stylesheet" href="assets/css/jquery.fileupload.css" />
+    <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css" />
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript b-ywet7mfhhb>
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css" />
+    </noscript>
+    <noscript b-ywet7mfhhb>
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css" />
+    </noscript>
+
+    <!-- Syncfusion ASP.NET Core controls scripts -->
+    <script src="https://cdn.syncfusion.com/ej2/25.1.42/dist/ej2.min.js"></script>
+
+    <!-- DataTables buttons dependencies -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.0/css/buttons.dataTables.css" />
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
+
+
+    <style>
+        input::-webkit-calendar-picker-indicator {
+            opacity: 100;
+            display: block;
+        }
+
+        .modal-backdrop {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+
+    <link rel="stylesheet" href="assets/update.css">
+
+</head>
+
+<body data-topbar="light">
+    <script>
+        $(document).ready(function () {
+            $('body').css('zoom', '0.8');
+        });
+    </script>
+    <!-- Begin page -->
+    <div b-ywet7mfhhb id="layout-wrapper">
+        <header b-ywet7mfhhb id="page-topbar">
+            <div b-ywet7mfhhb class="navbar-header">
+                <div b-ywet7mfhhb class="d-flex">
+                    <!-- LOGO -->
+                    <div b-ywet7mfhhb class="navbar-brand-box">
+                        <a b-ywet7mfhhb href="/" class="logo logo-dark">
+                            <span b-ywet7mfhhb class="logo-sm">
+                                <img b-ywet7mfhhb src="assets/images/insitelogo_sm.png" alt="" width="60">
+                            </span>
+                            <span b-ywet7mfhhb class="logo-lg">
+                                <img b-ywet7mfhhb src="assets/images/insitelogo.png" alt="" width="225">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button b-ywet7mfhhb type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <i b-ywet7mfhhb class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                    &nbsp; &nbsp;
+                    <button b-ywet7mfhhb type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <span b-ywet7mfhhb>Protocol: Neurocrine Biosciences Demo</span>
+                    </button>
+                    &nbsp; &nbsp;
+                    <button b-ywet7mfhhb type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <span b-ywet7mfhhb>
+                            Company: Clinical Drug Development Corporation
+                            <span b-ywet7mfhhb> - 9998</span>
+
+                        </span>
+                    </button>
+                </div>
+                <div b-ywet7mfhhb class="d-flex">
+                    <div b-ywet7mfhhb class="dropdown d-none d-lg-inline-block ms-1">
+                        <button b-ywet7mfhhb type="button" class="btn header-item noti-icon waves-effect"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i b-ywet7mfhhb class="bx bx-customize"></i>
+                        </button>
+
+                    </div>
+
+                    <div b-ywet7mfhhb class="dropdown d-none d-lg-inline-block ms-1">
+                        <button b-ywet7mfhhb type="button" class="btn header-item noti-icon waves-effect"
+                            data-bs-toggle="fullscreen">
+                            <i b-ywet7mfhhb class="bx bx-fullscreen"></i>
+                        </button>
+                    </div>
+
+                    <div b-ywet7mfhhb class="dropdown d-inline-block">
+                        <button b-ywet7mfhhb type="button" class="btn header-item waves-effect"
+                            id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+
+                            <span b-ywet7mfhhb class="d-none d-xl-inline-block ms-1" key="t-henry">
+                                iupdater1@gmail.com </span>
+                            <i b-ywet7mfhhb class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div b-ywet7mfhhb class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+
+                            <a b-ywet7mfhhb class="dropdown-item d-block" href="/Account/MyAccount"><i b-ywet7mfhhb
+                                    class="bx bx-wrench font-size-16 align-middle me-1"></i> <span b-ywet7mfhhb
+                                    key="t-settings">My Account</span></a>
+                            <form id="logoutForm" method="post" class="d-none" action="/Account/Logout">
+
+                                <input name="__RequestVerificationToken" type="hidden"
+                                    value="CfDJ8EhTEJZ8TVhCudrEeA3KszkhJatabtnbcKcsVlYFDNVhJDxJK3Ve6NnrkLFU4TiKdn5nNkHIl_Xv5rk9nrrju2Zr-RX5Us6XVvBETi70NoIj2gBHqK3glNxlAFYmV5UVqw4Jq0WRis5GOia92Zx_5OS5ZduGlFABUPsjiO0Y3SlngVmtsQbQo4ZxLp7G24cY5Q" />
+                            </form>
+                            <a b-ywet7mfhhb class="dropdown-item text-danger" href="javascript:void(0);"
+                                onclick="document.getElementById('logoutForm').submit();">
+                                <i b-ywet7mfhhb class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                                Logout
+                            </a>
+
+                            <div b-ywet7mfhhb class="dropdown-divider"></div>
+
+                            <a b-ywet7mfhhb class="dropdown-item" href="#"><i b-ywet7mfhhb
+                                    class="bx bx-wallet font-size-16 align-middle me-1"></i> <span b-ywet7mfhhb
+                                    key="t-my-wallet">Last Login: 03/23/2025 04:35 AM</span></a>
+                            <a b-ywet7mfhhb class="dropdown-item" href="#">
+                                <i b-ywet7mfhhb class="bx bx-wallet font-size-16 align-middle me-1"></i>
+                                <span b-ywet7mfhhb key="t-my-wallet">Password Expires: </span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div b-ywet7mfhhb class="vertical-menu">
+
+            <div b-ywet7mfhhb data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div b-ywet7mfhhb id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul b-ywet7mfhhb class="metismenu list-unstyled" id="side-menu">
+                        <li b-ywet7mfhhb class="menu-title" key="t-menu">Menu</li>
+
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/">
+                                <i b-ywet7mfhhb class="bx bx-home-circle"></i>
+                                <span b-ywet7mfhhb>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/Query">
+                                <i b-ywet7mfhhb class="bx bx-message-dots"></i>
+                                <span b-ywet7mfhhb>Queries</span>
+                            </a>
+                        </li>
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/HelpDesk">
+                                <i b-ywet7mfhhb class="bx bx-help-circle"></i>
+                                <span b-ywet7mfhhb>Help Desk</span>
+                            </a>
+                        </li>
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/KnowledgeBase">
+                                <i b-ywet7mfhhb class="bx bx-book-open"></i>
+                                <span b-ywet7mfhhb>Knowledge Base</span>
+                            </a>
+                        </li>
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/FAQs">
+                                <i b-ywet7mfhhb class='bx bx-conversation'></i>
+                                <span b-ywet7mfhhb>FAQs</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <div b-ywet7mfhhb class="main-content">
+            <div b-ywet7mfhhb class="page-content">
+                <div b-ywet7mfhhb class="container-fluid" style="min-height: 100vh !important;">
+
+
+
+                    <style>
+                        .wide-model {
+                            max-width: 100%;
+                            width: 1000px;
+                        }
+
+                        .download-link {
+                            color: blue;
+                            /* Change color to blue or any other color you prefer */
+                            text-decoration: underline !important;
+                            /* Add underline to indicate it's a link */
+                            cursor: pointer;
+                            /* Change cursor to pointer on hover */
+                        }
+
+                        .download-link:hover {
+                            color: darkblue;
+                            /* Change color on hover */
+                        }
+
+                        .icon-image {
+                            width: 50px;
+                            /* Adjust the width of the icon */
+                            height: 50px;
+                            /* Adjust the height of the icon */
+                            border: 2px solid #ccc;
+                            /* Add a border to the icon */
+                            border-radius: 5px;
+                            /* Add rounded corners to the border */
+                            padding: 5px;
+                            /* Add padding inside the border */
+                            transition: transform 0.3s ease;
+                            /* Add transition effect for smooth animation */
+                        }
+
+                        /* Change the appearance of the icon when hovered over */
+                        .icon-image:hover {
+                            transform: scale(1.1);
+                            /* Increase the size of the icon on hover */
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                            /* Add a shadow effect on hover */
+                            cursor: pointer;
+                            /* Change cursor to pointer on hover */
+                        }
+
+                        .custom-card {
+                            background-color: #f4f4f4;
+                            /* Light gray background color */
+                        }
+                    </style>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 font-size-18">Knowledge Base Management</h4>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">InSite 2.0</a></li>
+                                        <li class="breadcrumb-item active">Knowledge Base</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- -------------------------------- -->
+                            <div class="knowledge-wrapper">
+
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div id="successMessage" class="card-body pt-0 d-none">
+                                            <br />
+                                            <div class="alert alert-success" role="alert">
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=d9276e6b-00b4-4af0-ba92-230755f5bb62">
+                                                                    <img src="img/txt.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=d9276e6b-00b4-4af0-ba92-230755f5bb62"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Lorem, ipsum dolor.</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        10</span>
+                                                                    <span class="badge bg-secondary">Format: .txt</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=1a4d5a0e-808d-4651-805d-0842ff604f04">
+                                                                    <img src="img/txt.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=1a4d5a0e-808d-4651-805d-0842ff604f04"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Lorem ipsum dolor sit.</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .txt</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=f424f92c-31a3-495a-9041-9a85bcf96844">
+                                                                    <img src="img/txt.png" alt="File Icon"
+                                                                    class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=f424f92c-31a3-495a-9041-9a85bcf96844"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Lorem, ipsum dolor.</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .txt</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=07d7c9bf-9649-4c65-980e-1e5907f85747">
+                                                                    <img src="img/txt.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=07d7c9bf-9649-4c65-980e-1e5907f85747"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Lorem ipsum dolor sit amet.</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .txt</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=2ea58e1f-7e5d-4544-9230-60e5e76fdbe2">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=2ea58e1f-7e5d-4544-9230-60e5e76fdbe2"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Demo</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        10</span>
+                                                                    <span class="badge bg-secondary">Format: .gif</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=626d2a86-09b3-422c-827c-2da4fab9642a">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=626d2a86-09b3-422c-827c-2da4fab9642a"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Demo1</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        3</span>
+                                                                    <span class="badge bg-secondary">Format: .jpg</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=19ad705d-b36d-495a-b5d1-8b0e8ed3ab58">
+                                                                    <img src="img/pdf.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=19ad705d-b36d-495a-b5d1-8b0e8ed3ab58"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Demo2</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .pdf</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=e0b5b34f-1383-4be1-ae72-f1da4560373d">
+                                                                    <img src="img/txt.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=e0b5b34f-1383-4be1-ae72-f1da4560373d"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Demo5</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        3</span>
+                                                                    <span class="badge bg-secondary">Format: .txt</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=8f0dca53-a9c2-4fd0-bc9d-d0e63269b213">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=8f0dca53-a9c2-4fd0-bc9d-d0e63269b213"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Nihan Test - Test Nov
+                                                                    15</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        2</span>
+                                                                    <span class="badge bg-secondary">Format: .png</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=daa3939e-928b-4e5a-8965-1592c7a1ec5e">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=daa3939e-928b-4e5a-8965-1592c7a1ec5e"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">nihan test 1</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        3</span>
+                                                                    <span class="badge bg-secondary">Format: .jpg</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=6d06a68d-6748-453b-ad5c-45cb6bcc73dc">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=6d06a68d-6748-453b-ad5c-45cb6bcc73dc"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Nov 16</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        2</span>
+                                                                    <span class="badge bg-secondary">Format: .png</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=3946add2-f42d-40ed-b173-6beaea79c768">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=3946add2-f42d-40ed-b173-6beaea79c768"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">Test - Nov 15 2023</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .png</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=483c5c9b-aac9-4563-bf4e-de2ea606bb5e">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=483c5c9b-aac9-4563-bf4e-de2ea606bb5e"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">TestFile 10-13-2023 -
+                                                                    edit 1</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        2</span>
+                                                                    <span class="badge bg-secondary">Format: .png</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=7888c37c-4122-41f9-8448-11da56bc4d96">
+                                                                    <img src="img/txt.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=7888c37c-4122-41f9-8448-11da56bc4d96"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">TestFile14</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .txt</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=dbb7d3a4-19e1-4ec1-820a-1fbe97282b35">
+                                                                    <img src="img/txt.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=dbb7d3a4-19e1-4ec1-820a-1fbe97282b35"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">TestFile14</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        9</span>
+                                                                    <span class="badge bg-secondary">Format: .txt</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=791ef675-ab9a-43a3-aec2-b31df2323690">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=791ef675-ab9a-43a3-aec2-b31df2323690"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">TestFile18</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .png</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=41f4d72c-4d96-4814-b329-cf055ce1082b">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=41f4d72c-4d96-4814-b329-cf055ce1082b"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">TestFile3</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .png</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=511a548d-2e50-4b81-a329-59044945ae17">
+                                                                    <img src="img/txt.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=511a548d-2e50-4b81-a329-59044945ae17"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">TestFile3</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .txt</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-6">
+                                                <div class="card mb-3 custom-card">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2">
+                                                            <div class="card-body">
+                                                                <!-- Make the file icon a link to download the file -->
+                                                                <a
+                                                                    href="/KnowledgeBase/DownloadFile?guid=9e61c13f-4e66-42d1-b4c8-54294e1957c2">
+                                                                    <img src="img/image.png" alt="File Icon"
+                                                                        class="icon-image" />
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <!-- Create a link to download the file -->
+                                                                <a href="/KnowledgeBase/DownloadFile?guid=9e61c13f-4e66-42d1-b4c8-54294e1957c2"
+                                                                    class="download-link"
+                                                                    style="margin-bottom: 10px;">TestFile3</a>
+                                                                <!-- Extract the extension from the file name -->
+                                                                <p class="card-text">
+                                                                    <span class="badge bg-primary">Latest Version:
+                                                                        1</span>
+                                                                    <span class="badge bg-secondary">Format: .png</span>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <span>Uploaded On:</span><br>
+                                                                    3/6/2025 1:41:08 AM
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- -------------------------------- -->
+                        </div>
+                    </div>
+
+                    <script>
+                        closeAllTabs();
+                        $('#documentationTab').addClass("active");
+
+                        $(function () {
+                            new DataTable('#docTable');
+
+                            $('#modal-versions').on('hidden.bs.modal', function () {
+                                location.reload();
+                            });
+                        });
+
+
+                        if ('' != '' && '' != 'undefined') {
+                            $("#successMessage").removeClass('d-none');
+                        }
+                    </script>
+
+
+
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer b-ywet7mfhhb>
+                <div b-ywet7mfhhb class="container-fluid ">
+                    <div b-ywet7mfhhb class="row">
+                        <div b-ywet7mfhhb class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © InSite 2.0
+                        </div>
+                        <div b-ywet7mfhhb class="col-sm-6">
+                            <div b-ywet7mfhhb class="text-sm-right d-none d-sm-block">
+                                Software Engineering By <a b-ywet7mfhhb href="https://zolta.io">Zolta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/simplebar.min.js"></script>
+    <script src="assets/js/waves.min.js"></script>
+
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/overview.js"></script>
+
+    <script src="assets/js/select2.js"></script>
+
+
+    <script>
+        var changeSetId = -1;
+        setInterval(function () {
+            $.ajax({
+                url: '/Secure',
+                type: 'POST',
+                success: function (data) {
+                    // Handle success
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.status === 401) {
+                        window.location.href = '/Account/Login';
+                    } else {
+                        // Handle other errors
+                    }
+                }
+            });
+        }, (20 * 60000) + 10000); // Every 20 mins and 10s -- TO DO, replace 20 mins with value from config.
+    </script>
+
+
+    <div b-ywet7mfhhb id="modal-changeSet" class="modal fade" tabindex="-1" aria-labelledby="changeSetModalLabel"
+        aria-hidden="true">
+        <div b-ywet7mfhhb class="modal-dialog modal-xl">
+            <div b-ywet7mfhhb class="modal-content">
+                <div b-ywet7mfhhb class="modal-header">
+                    <div b-ywet7mfhhb id="recordChangeHeaderDiv"></div>
+                    <button b-ywet7mfhhb type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div b-ywet7mfhhb class="modal-body">
+                    <div b-ywet7mfhhb id="modal-changeSet-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Syncfusion ASP.NET Core Script Manager -->
+    <script>window.syncfusion = { isLicValidated: true };</script>
+
+</body>
+
+</html>
