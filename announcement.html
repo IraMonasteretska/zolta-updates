@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Clinical InSite 2.0</title>
+
+    <meta content="TO DO - Get description from InSite team" name="description" />
+    <!-- <link rel="shortcut icon" href="/assets/images/favicon.ico"> -->
+    <link href="assets/css/dashstyle.css" id="dashstyle-style" rel="stylesheet" />
+    <link href="assets/css/cert.css" id="cert-style" rel="stylesheet" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" />
+    <link href="assets/css/dataTables.bootstrap5.min.css" id="bootstrap-style" rel="stylesheet" />
+
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" />
+
+    <link href="assets/css/select2.css" id="select2-style" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/folders.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!-- Syncfusion ASP.NET Core controls styles -->
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/24.2.7/fluent.css" />
+
+    <!-- App js -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/form-builder.min.js"></script>
+    <script src="assets/js/form-render.min.js"></script>
+
+    <script src="assets/js/popper.js"></script>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
+
+    <!-- <script src="/assets/js/plugin.js"></script> -->
+    <script src="assets/js/site.js"></script>
+
+    <script src="assets/js/select2.js"></script>
+    <script src="assets/js/ckeditor.js"></script>
+
+    <!-- blueimp Gallery styles -->
+    <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css" />
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <link rel="stylesheet" href="assets/css/jquery.fileupload.css" />
+    <link rel="stylesheet" href="assets/css/jquery.fileupload-ui.css" />
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript b-ywet7mfhhb>
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-noscript.css" />
+    </noscript>
+    <noscript b-ywet7mfhhb>
+        <link rel="stylesheet" href="assets/css/jquery.fileupload-ui-noscript.css" />
+    </noscript>
+
+    <!-- Syncfusion ASP.NET Core controls scripts -->
+    <script src="https://cdn.syncfusion.com/ej2/25.1.42/dist/ej2.min.js"></script>
+
+    <!-- DataTables buttons dependencies -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.0/css/buttons.dataTables.css" />
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
+
+
+    <link rel="stylesheet" href="assets/update.css" />
+
+    <style>
+        input::-webkit-calendar-picker-indicator {
+            opacity: 100;
+            display: block;
+        }
+
+        .modal-backdrop {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+
+
+</head>
+
+<body data-topbar="light">
+    <script>
+        $(document).ready(function () {
+            $('body').css('zoom', '0.8');
+        });
+    </script>
+    <!-- Begin page -->
+    <div b-ywet7mfhhb id="layout-wrapper">
+        <header b-ywet7mfhhb id="page-topbar">
+            <div b-ywet7mfhhb class="navbar-header">
+                <div b-ywet7mfhhb class="d-flex">
+                    <!-- LOGO -->
+                    <div b-ywet7mfhhb class="navbar-brand-box">
+                        <a b-ywet7mfhhb href="/" class="logo logo-dark">
+                            <span b-ywet7mfhhb class="logo-sm">
+                                <img b-ywet7mfhhb src="assets/images/insitelogo_sm.png" alt="" width="60">
+                            </span>
+                            <span b-ywet7mfhhb class="logo-lg">
+                                <img b-ywet7mfhhb src="assets/images/insitelogo.png" alt="" width="225">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button b-ywet7mfhhb type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <i b-ywet7mfhhb class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                    &nbsp; &nbsp;
+                    <button b-ywet7mfhhb type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <span b-ywet7mfhhb>Protocol: Neurocrine Biosciences Demo</span>
+                    </button>
+                    &nbsp; &nbsp;
+                    <button b-ywet7mfhhb type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <span b-ywet7mfhhb>
+                            Company: Clinical Drug Development Corporation
+                            <span b-ywet7mfhhb> - 9998</span>
+
+                        </span>
+                    </button>
+                </div>
+                <div b-ywet7mfhhb class="d-flex">
+                    <div b-ywet7mfhhb class="dropdown d-none d-lg-inline-block ms-1">
+                        <button b-ywet7mfhhb type="button" class="btn header-item noti-icon waves-effect"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i b-ywet7mfhhb class="bx bx-customize"></i>
+                        </button>
+
+                    </div>
+
+                    <div b-ywet7mfhhb class="dropdown d-none d-lg-inline-block ms-1">
+                        <button b-ywet7mfhhb type="button" class="btn header-item noti-icon waves-effect"
+                            data-bs-toggle="fullscreen">
+                            <i b-ywet7mfhhb class="bx bx-fullscreen"></i>
+                        </button>
+                    </div>
+
+                    <div b-ywet7mfhhb class="dropdown d-inline-block">
+                        <button b-ywet7mfhhb type="button" class="btn header-item waves-effect"
+                            id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+
+                            <span b-ywet7mfhhb class="d-none d-xl-inline-block ms-1" key="t-henry">
+                                iupdater1@gmail.com </span>
+                            <i b-ywet7mfhhb class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div b-ywet7mfhhb class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+
+                            <a b-ywet7mfhhb class="dropdown-item d-block" href="/Account/MyAccount"><i b-ywet7mfhhb
+                                    class="bx bx-wrench font-size-16 align-middle me-1"></i> <span b-ywet7mfhhb
+                                    key="t-settings">My Account</span></a>
+                            <form id="logoutForm" method="post" class="d-none" action="/Account/Logout">
+
+                                <input name="__RequestVerificationToken" type="hidden"
+                                    value="CfDJ8Nmgp4GsIeVMt7LDj3KSXWr-pFH6UBCpeCTuy5J2BxbCKxJ08Ob88hxw-FGizGJc8Cm2voFO78AQaOcbWZi5wrv5XdiMjdJzwC87BhULT-P7AB9jsGSbBrgsSeoKORVjOFjq92DWNRetZtmagYcldCrRXORnwIl9TmzGkAUK_kSJDUNpsBDYFcHjgXCqDGubTA" />
+                            </form>
+                            <a b-ywet7mfhhb class="dropdown-item text-danger" href="javascript:void(0);"
+                                onclick="document.getElementById('logoutForm').submit();">
+                                <i b-ywet7mfhhb class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                                Logout
+                            </a>
+
+                            <div b-ywet7mfhhb class="dropdown-divider"></div>
+
+                            <a b-ywet7mfhhb class="dropdown-item" href="#"><i b-ywet7mfhhb
+                                    class="bx bx-wallet font-size-16 align-middle me-1"></i> <span b-ywet7mfhhb
+                                    key="t-my-wallet">Last Login: 03/24/2025 10:20 AM</span></a>
+                            <a b-ywet7mfhhb class="dropdown-item" href="#">
+                                <i b-ywet7mfhhb class="bx bx-wallet font-size-16 align-middle me-1"></i>
+                                <span b-ywet7mfhhb key="t-my-wallet">Password Expires: </span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div b-ywet7mfhhb class="vertical-menu">
+
+            <div b-ywet7mfhhb data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div b-ywet7mfhhb id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul b-ywet7mfhhb class="metismenu list-unstyled" id="side-menu">
+                        <li b-ywet7mfhhb class="menu-title" key="t-menu">Menu</li>
+
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/">
+                                <i b-ywet7mfhhb class="bx bx-home-circle"></i>
+                                <span b-ywet7mfhhb>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/Query">
+                                <i b-ywet7mfhhb class="bx bx-message-dots"></i>
+                                <span b-ywet7mfhhb>Queries</span>
+                            </a>
+                        </li>
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/HelpDesk">
+                                <i b-ywet7mfhhb class="bx bx-help-circle"></i>
+                                <span b-ywet7mfhhb>Help Desk</span>
+                            </a>
+                        </li>
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/KnowledgeBase">
+                                <i b-ywet7mfhhb class="bx bx-book-open"></i>
+                                <span b-ywet7mfhhb>Knowledge Base</span>
+                            </a>
+                        </li>
+                        <li b-ywet7mfhhb>
+                            <a b-ywet7mfhhb href="/FAQs">
+                                <i b-ywet7mfhhb class='bx bx-conversation'></i>
+                                <span b-ywet7mfhhb>FAQs</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <div b-ywet7mfhhb class="main-content">
+            <div b-ywet7mfhhb class="page-content">
+                <div b-ywet7mfhhb class="container-fluid" style="min-height: 100vh !important;">
+
+
+                    <style>
+                        .wide-model {
+                            max-width: 100%;
+                            width: 1000px;
+                        }
+                    </style>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 font-size-18">Announcements</h4>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">InSite 2.0</a></li>
+                                        <li class="breadcrumb-item active">Announcement</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="announcement-wrapper">
+                        <div class="row mb-3 announcement__radiogroup">
+                            <div class="col-lg-6">
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label" for="prioritylabel">Priority:</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="priorityFilter" id="priorityAll"
+                                        value="all" checked>
+                                    <label class="form-check-label" for="priorityAll">All</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="priorityFilter" id="priorityHigh"
+                                        value="high">
+                                    <label class="form-check-label" for="priorityHigh">High</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="priorityFilter"
+                                        id="priorityMedium" value="medium">
+                                    <label class="form-check-label" for="priorityMedium">Medium</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="priorityFilter" id="priorityLow"
+                                        value="low">
+                                    <label class="form-check-label" for="priorityLow">Low</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label" for="typelabel">Type:</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="typeFilter" id="typeAll"
+                                        value="all" checked>
+                                    <label class="form-check-label" for="typeAll">All</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="typeFilter" id="typeSystem"
+                                        value="system">
+                                    <label class="form-check-label" for="typeSystem">System</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="typeFilter" id="typeProtocol"
+                                        value="protocol">
+                                    <label class="form-check-label" for="typeProtocol">Protocol</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 mb-3 announcement-card low" data-protocol-id="">
+                                <div class="card custom-card border border-success">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">The announcements page gives information about active
+                                                announcements.</h5>
+                                            <p class="card-text">Active From: 10/5/2023 11:00:00 PM</p>
+                                            <p class="card-text">Active To: 10/10/2023 11:00:00 PM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-success m-1">Low</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card high" data-protocol-id="4">
+                                <div class="card custom-card border border-danger">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">New announcement</h5>
+                                            <p class="card-text">Active From: 3/5/2024 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 3/7/2024 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-danger m-1">High</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card medium" data-protocol-id="4">
+                                <div class="card custom-card border border-warning ">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">announcement added</h5>
+                                            <p class="card-text">Active From: 3/5/2024 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 3/6/2024 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-warning m-1">Medium</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card low" data-protocol-id="">
+                                <div class="card custom-card border border-success">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">Testing Announcement Test</h5>
+                                            <p class="card-text">Active From: 10/13/2023 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 11/13/2023 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-success m-1">Low</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card low" data-protocol-id="">
+                                <div class="card custom-card border border-success">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">Testing Announcement Test</h5>
+                                            <p class="card-text">Active From: 10/13/2023 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 11/13/2023 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-success m-1">Low</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card low" data-protocol-id="">
+                                <div class="card custom-card border border-success">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">Testing Announcement Test New</h5>
+                                            <p class="card-text">Active From: 10/14/2023 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 10/19/2023 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-success m-1">Low</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card high" data-protocol-id="4">
+                                <div class="card custom-card border border-danger">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">Test Error Nihan </h5>
+                                            <p class="card-text">Active From: 3/5/2024 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 3/5/2024 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-danger m-1">High</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card low" data-protocol-id="">
+                                <div class="card custom-card border border-success">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">Testing Nihan </h5>
+                                            <p class="card-text">Active From: 9/13/2023 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 9/10/2023 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-success m-1">Low</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card medium" data-protocol-id="4">
+                                <div class="card custom-card border border-warning">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">T84 - Testing announcemen</h5>
+                                            <p class="card-text">Active From: 3/5/2024 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 3/6/2024 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-warning m-1">Medium</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card low" data-protocol-id="">
+                                <div class="card custom-card border border-warning">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">Test second</h5>
+                                            <p class="card-text">Active From: 10/31/2023 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 10/31/2023 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-success m-1">Low</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card low" data-protocol-id="10">
+                                <div class="card custom-card border border-success">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">Testing Announcements</h5>
+                                            <p class="card-text">Active From: 11/30/2023 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 12/7/2023 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-success m-1">Low</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3 announcement-card low" data-protocol-id="4">
+                                <div class="card custom-card border border-success">
+                                    <div class="card-body">
+                                        <div class="topinfo">
+                                            <h5 class="card-title">Tes-Maria</h5>
+                                            <p class="card-text">Active From: 11/19/2024 12:00:00 AM</p>
+                                            <p class="card-text">Active To: 11/20/2024 12:00:00 AM</p>
+                                        </div>
+                                        <p class="card-text priority">
+                                            Priority:
+                                            <span class="badge badge-soft-success m-1">Low</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        closeAllTabs();
+                        $('#announcementTab').addClass("active");
+
+                        $(function () {
+                            new DataTable('#announcementTable');
+
+                            // Add event listener for priority radio button change
+                            $('input[name=priorityFilter]').change(function () {
+                                var priority = $(this).val();
+                                var type = $('input[name=typeFilter]:checked').val();
+                                filterAnnouncements(priority, type);
+                            });
+
+                            // Add event listener for type radio button change
+                            $('input[name=typeFilter]').change(function () {
+                                var type = $(this).val();
+                                var priority = $('input[name=priorityFilter]:checked').val();
+                                filterAnnouncements(priority, type);
+                            });
+                        });
+
+                        // Function to filter announcements by priority and type
+                        function filterAnnouncements(priority, type) {
+                            $('.announcement-card').hide(); // Hide all announcements first
+
+                            // Show announcements based on both priority and type
+                            if (priority === 'all' && type === 'all') {
+                                $('.announcement-card').show(); // Show all announcements
+                            } else if (priority === 'all') {
+                                filterAnnouncementsByType(type);
+                            } else if (type === 'all') {
+                                filterAnnouncementsByPriority(priority);
+                            } else {
+                                $('.announcement-card.' + priority + '[data-protocol-id' + (type === 'system' ? '=""' : '!=""') + ']').show();
+                            }
+                        }
+
+                        // Function to filter announcements by priority
+                        function filterAnnouncementsByPriority(priority) {
+                            $('.announcement-card').hide(); // Hide all announcements first
+                            $('.' + priority).show(); // Show announcements with selected priority
+                        }
+
+                        // Function to filter announcements by type
+                        function filterAnnouncementsByType(type) {
+                            $('.announcement-card').hide(); // Hide all announcements first
+                            if (type === 'system') {
+                                $('.announcement-card[data-protocol-id=""]').show(); // Show announcements without protocol
+                            } else {
+                                $('.announcement-card[data-protocol-id!=""]').show(); // Show announcements with protocol
+                            }
+                        }
+
+                        if ('' != '' && '' != 'undefined') {
+                            $("#successMessage").removeClass('d-none');
+                        }
+                    </script>
+
+
+
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer b-ywet7mfhhb>
+                <div b-ywet7mfhhb class="container-fluid ">
+                    <div b-ywet7mfhhb class="row">
+                        <div b-ywet7mfhhb class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © InSite 2.0
+                        </div>
+                        <div b-ywet7mfhhb class="col-sm-6">
+                            <div b-ywet7mfhhb class="text-sm-right d-none d-sm-block">
+                                Software Engineering By <a b-ywet7mfhhb href="https://zolta.io">Zolta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/simplebar.min.js"></script>
+    <script src="assets/js/waves.min.js"></script>
+
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/overview.js"></script>
+
+    <script src="assets/js/select2.js"></script>
+
+
+    <script>
+        var changeSetId = -1;
+        setInterval(function () {
+            $.ajax({
+                url: '/Secure',
+                type: 'POST',
+                success: function (data) {
+                    // Handle success
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.status === 401) {
+                        window.location.href = '/Account/Login';
+                    } else {
+                        // Handle other errors
+                    }
+                }
+            });
+        }, (20 * 60000) + 10000); // Every 20 mins and 10s -- TO DO, replace 20 mins with value from config.
+    </script>
+
+
+    <div b-ywet7mfhhb id="modal-changeSet" class="modal fade" tabindex="-1" aria-labelledby="changeSetModalLabel"
+        aria-hidden="true">
+        <div b-ywet7mfhhb class="modal-dialog modal-xl">
+            <div b-ywet7mfhhb class="modal-content">
+                <div b-ywet7mfhhb class="modal-header">
+                    <div b-ywet7mfhhb id="recordChangeHeaderDiv"></div>
+                    <button b-ywet7mfhhb type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div b-ywet7mfhhb class="modal-body">
+                    <div b-ywet7mfhhb id="modal-changeSet-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Syncfusion ASP.NET Core Script Manager -->
+    <script>window.syncfusion = { isLicValidated: true };</script>
+
+</body>
+
+</html>
